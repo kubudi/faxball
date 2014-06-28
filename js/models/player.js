@@ -1,16 +1,15 @@
-$(function() {
+var Player = {
 
-  var Player = {
+  body: {},
 
-    var defaultPosition = {x:50, y:50}
-
-    var body = Bodies.circle(position.x, position.y, 15, {mass: 50})
-
-    move: function(direction) {
+  move: function(direction) {
+    if(this.body.speed <= 015) {
       Brain.move(this.body, direction)
     }
+  },
 
-    add: function() {
-      Brain.add(this.body)
-    }
+  create: function() {
+    this.body = Brain.create(50, 50, 15, {mass: 500})
+    Brain.add(this.body)
   }
+}

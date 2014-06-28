@@ -1,24 +1,25 @@
 $(document).ready(function() {
-	var Canvas = $('#canvas');
+	var canvas = $('#canvas');
+   console.log(canvas);
 
-	Canvas.keydown( function(event) {
+	canvas.keydown( function(event) {
 		var pressedKey = event.which
 		//console.log(pressedKey);
 		switch(pressedKey) {
 			case KEY_W: 
-				Mover.MoveUp();
+				Mover.MoveUp(Player);
 				break;
 			case KEY_S:
-				Mover.MoveDown();
+				Mover.MoveDown(Player);
 				break;
 			case KEY_A:
-				Mover.MoveLeft();
+				Mover.MoveLeft(Player);
 				break;
 			case KEY_D:
-				Mover.MoveRight();
+				Mover.MoveRight(Player);
 				break;
 			case KEY_SPACE:
-				Mover.Shoot();
+				Mover.Shoot(Player);
 				break;
 			case KEY_ESCAPE:
 				console.log("Unfocus");

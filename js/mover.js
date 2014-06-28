@@ -1,26 +1,26 @@
 var Mover = {
-	MoveUp : function() {
+	MoveUp : function(player) {
 		console.log("Moved Up");
-		//TODO
+		player.move({x: 0, y: -1})
 	},
 
-	MoveDown: function() {
+	MoveDown: function(player) {
 		console.log("Moved Down");
-		//TODO
+		player.move({x: 0, y: 1})
 	},
 
-	MoveRight: function() {
+	MoveRight: function(player) {
 		console.log("Moved Right");
-		//TODO
+		player.move({x: 1, y: 0})
 	},
 
-	MoveLeft: function() {
+	MoveLeft: function(player) {
 		console.log("Moved Left");
-		//TODO
+		player.move({x: -1, y: 0})
 	},
 
-	Shoot: function() {
+	Shoot: function(player) {
 		console.log("Shoot");
-		//TODO
+		//player.move({x: 0, y: -1})
 	}
 }
